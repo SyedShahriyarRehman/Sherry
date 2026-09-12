@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+	int units;
+	float bill;
+	printf("Enter Total Units Consumed: ");
+	scanf("%d" , &units);
+	if (units>=0 && units<=100)
+	{
+		bill = units*5 ;
+    }
+	else if (units>=101 && units<=200)
+	{
+		bill = (100*5) + (units - 100)*8 ;
+	}
+	else if (units>=201 && units<=400)
+	{
+		bill = (100*5) + (units -100)*8  + (units - 200)*12;
+	}
+	else
+	{
+		bill = (100*5) + (units - 100)*8 + (units - 200)*12 + (units - 400)*15;
+	}
+	printf("Your Total bill is:%f " , bill);
+	return 0;
+   
+}
